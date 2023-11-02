@@ -1,0 +1,374 @@
+/* CSS for the gallery container */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25vh;
+    position: relative; /* Enable absolute positioning for the gallery sides */
+}
+
+/* Style for the gallery content (left and right sides) */
+.gallery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for each side of the gallery (right and left) */
+.gallery-side {
+    width: 400px;
+    height: 350px;
+    border: 4px solid #000;
+    margin: 20px; /* Increase the margin to add more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto; /* Enable scrolling for gallery sides */
+    position: absolute; /* Position the gallery sides absolutely */
+}
+
+.left-gallery {
+    left: 2px; /* Position the left gallery at the left edge */
+}
+
+.right-gallery {
+    right: 0; /* Position the right gallery at the right edge */
+}
+
+/* Style for the image preview area */
+.preview {
+    width: 400px;
+    height: 350px;
+    border: 1px solid #000;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the image upload input */
+input[type="file"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+button, form input {
+    outline: none;
+}
+.header, .todo-area {
+    width: 100%;
+    text-align: center;
+}
+
+.header, form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {font-size: 1.5rem;padding: 0.5rem;border: none;background: #fff;}
+
+form button {
+    color: #bec917;
+    transition: .3s;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: green;
+    color: #fff;
+}
+
+.todo li {
+    flex: 1;
+    padding-left: 0.5rem;
+}
+
+ul#todolist {list-style: none;min-width: 30%;}
+
+.todo-container {justify-content: center;align-items: center;display: flex;}
+
+.todo {
+    background: #fff;
+    margin: 0.5rem;
+    color: #000;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+    
+
+.check-btn, .trash-btn {
+    float: right;
+    font-size: 1rem;
+    border: none;
+    background: #bec917;
+    color: #fff;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button.trash-btn {
+    background: #f04a4a;
+}
+
+button.check-btn {
+    background: #36a036;
+}
+
+button.trash-btn:hover {
+    background: red;
+}
+
+button.check-btn:hover {
+    background: green;
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 0.9rem;
+    width: 10rem;
+    cursor: pointer;
+   
+}
+#select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+#select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #bec917;
+    color: #fff;
+    pointer-events: none;
+    padding: 0.7rem;
+    transition: all 0.3s ease;
+}
+#select:hover::after{
+    background: #fff;
+    color: #bec917 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 10px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.context-menu-option {
+    padding: 2cm;
+    cursor: pointer;
+}
+
+.context-menu-option:hover {
+    background: #f0f0f0;
+}
+
+
+
+.bookmark-container {
+    /* Adjust this value to move the container below the center */
+    text-align: center;
+}
+
+#bookmark-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-bookmark {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bookmark-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.bookmark-item img {
+    max-width: 42px; /* Adjust the size as needed */
+    margin-right: 20px;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {box-sizing: border-box;}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #BAD7E9;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body.dark {background-color: #3C486B;}
+
+body.dark h1, body.dark .support a {color: #fff;}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/* Button at the top right */
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f1c40f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Support me if you like it */
+.support {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.support a {
+  color: #292c35;
+  font-size: 32px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.support a:hover {
+  transform: scale(1.1);
+}
+
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #17D4FE;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clock {
+    color: white;
+    font-size: 25px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
