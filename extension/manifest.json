@@ -1,0 +1,11 @@
+{
+    "name": "productivity",
+    "description": "productivity os — To be more productive, you need to understand your habits. This extension helps you track your habits and gives you insights about your productivity tr",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "permissions": ["tabs"]
+  }
+  
